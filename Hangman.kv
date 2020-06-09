@@ -1,0 +1,440 @@
+<SolverGame>:
+
+    BoxLayout:
+        orientation: "horizontal"
+
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                id: question
+                text: "Choose prefered language... (DE/EN)"
+
+            BoxLayout:
+                orientation: "horizontal"
+
+                TextInput:
+                    id: answer
+                    text: ""
+                    font_size: 80
+                    background_color: [0,0,0,0]
+                    foreground_color: [1,1,1,1]
+
+                Button:
+                    id: submit
+                    text: "Submit"
+                    on_press: answer: ""
+
+<WonPageSolver>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "You Win!"
+
+        BoxLayout:
+
+            orientation: "vertical"
+
+            Label:
+                id: scores
+                text: ""
+
+            Label:
+                text: "Thank you for playing!"
+
+
+            BoxLayout:
+
+                orientation: "horizontal"
+
+                Button:
+                    id: back
+                    text: "Back to main menu"
+                    on_press: root.menu()
+                Button:
+                    id: again
+                    text: "Play again"
+                    on_press: root.again()
+
+<LanguageSelection>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "Please select a language"
+
+        BoxLayout:
+            orientation: "vertical"
+
+            Button:
+                text: "English"
+                on_press: root.english()
+
+            Button:
+                text: "Deutsch"
+                on_press: root.deutsch()
+
+<HangmanGameEnglish>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        BoxLayout:
+            orientation: "horizontal"
+
+            Label:
+                id: word
+                text: "test"
+                halign: "center"
+                valign: "center"
+                size: self.size
+                markup: True
+
+            Image:
+                id: im
+                source: "prog0.jpg"
+
+        GridLayout:
+            cols: 10
+            spacing: [5,5]
+            align: "center"
+
+            Button:
+                id: q
+                on_press: root.letter_pressed("q")
+                text: "Q"
+            Button:
+                id: w
+                on_press: root.letter_pressed("w")
+                text: "W"
+            Button:
+                id: e
+                on_press: root.letter_pressed("e")
+                text: "E"
+            Button:
+                id: r
+                on_press: root.letter_pressed("r")
+                text: "R"
+            Button:
+                id: t
+                on_press: root.letter_pressed("t")
+                text: "T"
+            Button:
+                id: z
+                on_press: root.letter_pressed("z")
+                text: "Z"
+            Button:
+                id: u
+                on_press: root.letter_pressed("u")
+                text: "U"
+            Button:
+                id: i
+                on_press: root.letter_pressed("i")
+                text: "I"
+            Button:
+                id: o
+                on_press: root.letter_pressed("o")
+                text: "O"
+            Button:
+                id: p
+                on_press: root.letter_pressed("p")
+                text: "P"
+            Button:
+                id: a
+                on_press: root.letter_pressed("a")
+                text: "A"
+            Button:
+                id: s
+                on_press: root.letter_pressed("s")
+                text: "S"
+            Button:
+                id: d
+                on_press: root.letter_pressed("d")
+                text: "D"
+            Button:
+                id: f
+                on_press: root.letter_pressed("f")
+                text: "F"
+            Button:
+                id: g
+                on_press: root.letter_pressed("g")
+                text: "G"
+            Button:
+                id: h
+                on_press: root.letter_pressed("h")
+                text: "H"
+            Button:
+                id: j
+                on_press: root.letter_pressed("j")
+                text: "J"
+            Button:
+                id: k
+                on_press: root.letter_pressed("k")
+                text: "K"
+            Button:
+                id: l
+                on_press: root.letter_pressed("l")
+                text: "L"
+            Button:
+                id: y
+                on_press: root.letter_pressed("y")
+                text: "Y"
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Button:
+                id: x
+                on_press: root.letter_pressed("x")
+                text: "X"
+            Button:
+                id: c
+                on_press: root.letter_pressed("c")
+                text: "C"
+            Button:
+                id: v
+                on_press: root.letter_pressed("v")
+                text: "V"
+            Button:
+                id: b
+                on_press: root.letter_pressed("b")
+                text: "B"
+            Button:
+                id: n
+                on_press: root.letter_pressed("n")
+                text: "N"
+            Button:
+                id: m
+                on_press: root.letter_pressed("m")
+                text: "M"
+
+<HangmanGameDeutsch>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        BoxLayout:
+            orientation: "horizontal"
+
+            Label:
+                id: word
+                halign: "center"
+                valign: "center"
+                size: self.size
+                markup: True
+
+            Image:
+                id: im
+                source: "prog0.jpg"
+
+        GridLayout:
+            cols: 10
+            spacing: [5,5]
+            align: "center"
+
+            Button:
+                id: q
+                on_press: root.letter_pressed("q")
+                text: "Q"
+            Button:
+                id: w
+                on_press: root.letter_pressed("w")
+                text: "W"
+            Button:
+                id: e
+                on_press: root.letter_pressed("e")
+                text: "E"
+            Button:
+                id: r
+                on_press: root.letter_pressed("r")
+                text: "R"
+            Button:
+                id: t
+                on_press: root.letter_pressed("t")
+                text: "T"
+            Button:
+                id: z
+                on_press: root.letter_pressed("z")
+                text: "Z"
+            Button:
+                id: u
+                on_press: root.letter_pressed("u")
+                text: "U"
+            Button:
+                id: i
+                on_press: root.letter_pressed("i")
+                text: "I"
+            Button:
+                id: o
+                on_press: root.letter_pressed("o")
+                text: "O"
+            Button:
+                id: p
+                on_press: root.letter_pressed("p")
+                text: "P"
+            Button:
+                id: a
+                on_press: root.letter_pressed("a")
+                text: "A"
+            Button:
+                id: s
+                on_press: root.letter_pressed("s")
+                text: "S"
+            Button:
+                id: d
+                on_press: root.letter_pressed("d")
+                text: "D"
+            Button:
+                id: f
+                on_press: root.letter_pressed("f")
+                text: "F"
+            Button:
+                id: g
+                on_press: root.letter_pressed("g")
+                text: "G"
+            Button:
+                id: h
+                on_press: root.letter_pressed("h")
+                text: "H"
+            Button:
+                id: j
+                on_press: root.letter_pressed("j")
+                text: "J"
+            Button:
+                id: k
+                on_press: root.letter_pressed("k")
+                text: "K"
+            Button:
+                id: l
+                on_press: root.letter_pressed("l")
+                text: "L"
+            Button:
+                id: y
+                on_press: root.letter_pressed("y")
+                text: "Y"
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Button:
+                id: x
+                on_press: root.letter_pressed("x")
+                text: "X"
+            Button:
+                id: c
+                on_press: root.letter_pressed("c")
+                text: "C"
+            Button:
+                id: v
+                on_press: root.letter_pressed("v")
+                text: "V"
+            Button:
+                id: b
+                on_press: root.letter_pressed("b")
+                text: "B"
+            Button:
+                id: n
+                on_press: root.letter_pressed("n")
+                text: "N"
+            Button:
+                id: m
+                on_press: root.letter_pressed("m")
+                text: "M"
+
+<WonPage>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "You Win!"
+
+        BoxLayout:
+
+            orientation: "vertical"
+
+            Label:
+                id: scores
+                text: ""
+
+            Label:
+                text: "Thank you for playing!"
+
+
+            BoxLayout:
+
+                orientation: "horizontal"
+
+                Button:
+                    id: back
+                    text: "Back to main menu"
+                    on_press: root.menu()
+                Button:
+                    id: again
+                    text: "Play again"
+                    on_press: root.again()
+
+<LostPageSolver>:
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "You lose!"
+
+        BoxLayout:
+
+            orientation: "vertical"
+
+            Label:
+                id: scores
+                text: ""
+
+            Label:
+                text: "Thank you for playing!"
+
+
+            BoxLayout:
+
+                orientation: "horizontal"
+
+                Button:
+                    id: back
+                    text: "Back to main menu"
+                    on_press: root.menu()
+
+<LostPage>:
+
+    BoxLayout:
+
+        orientation: "vertical"
+
+        Label:
+            text: "You lose!"
+
+        Label:
+            id: selected_word
+            text: ""
+
+        BoxLayout:
+
+            orientation: "vertical"
+
+            Label:
+                id: scores
+                text: ""
+
+            Label:
+                text: "Thank you for playing!"
+
+
+            BoxLayout:
+
+                orientation: "horizontal"
+
+                Button:
+                    id: back
+                    text: "Back to main menu"
+                    on_press: root.menu()
